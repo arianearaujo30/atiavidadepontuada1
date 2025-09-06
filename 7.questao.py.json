@@ -1,0 +1,25 @@
+import os
+os.system("cls")
+
+
+produto = int(input("Digite o nome do produto: "))
+quantidade = int(input("Digite a quantidade adquirida: "))
+preco_unitario = float(input("Digite o preço unitário: "))
+
+total = quantidade * preco_unitario
+
+if quantidade <= 5:
+    desconto = total * 0.02
+    elif quantidade <= 10:
+        desconto = total * 0.03
+        else:
+            desconto = total * 0.05
+
+            total_a_pagar = total - desconto
+
+            print(f"\nProduto: {produto}")
+            print(f"Quantidade: {quantidade}")
+            print(f"Preço unitário: R$ {preco_unitario:}")
+            print(f"Total sem desconto: R$ {total:}")
+            print(f"Desconto: R$ {desconto:}")
+            print(f"Total a pagar: R$ {total_a_pagar:}")
